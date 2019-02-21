@@ -10,7 +10,7 @@
 
 # Dockerfile.nodejs
 
-FROM node:9.5.0
+FROM node:11.10.0
 
 WORKDIR /code
 ADD . /code
