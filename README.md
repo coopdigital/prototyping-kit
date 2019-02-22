@@ -1,8 +1,15 @@
 # Dockerised Prototype
 
-## Building
+##  Local development
+
+### Build the thing
 `$ docker-compose run web npm install`
 
-## Running
+You can also use the option `--no-cache` flag to build a clean image
+
+### Run the thing
 `$ docker-compose up`
-## Test
+
+## Building for production
+`$ docker-compose run web npm run-script build`
+
