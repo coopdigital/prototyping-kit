@@ -1,4 +1,4 @@
-FROM node:11.10.0-alpine
+FROM node:11.10.0
 
 WORKDIR /code
 ADD . /code
