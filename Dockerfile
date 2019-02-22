@@ -5,4 +5,6 @@ ADD . /code
 
 RUN npm install parcel-bundler
 
-CMD ["npm", "start"]
+EXPOSE 1234
+
+CMD ["npm", "run-script", "build"]
