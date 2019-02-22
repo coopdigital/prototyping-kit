@@ -1,12 +1,12 @@
 {
   "name": "dockerised-prototype",
-  "version": "1.0.0",
-  "main": "index.html",
+  "version": "0.1.0",
+  "main": "prototype/index.html",
   "author": "Becky Arrowsmith",
   "license": "MIT",
   "scripts": {
-    "start": "parcel index.html --no-cache --hmr-port 49359",
-    "build": "parcel build index.html --out-dir public --public-url ./"
+    "start": "parcel prototype/index.html --no-cache --hmr-port 49359",
+    "build": "parcel prototype/build index.html --out-dir public --public-url ./"
   },
   "dependencies": {},
   "devDependencies": {
