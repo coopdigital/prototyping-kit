@@ -1,15 +1,15 @@
 {
-  "name": "dockerised-prototype",
-  "version": "0.1.0",
-  "main": "prototype/index.html",
-  "author": "Becky Arrowsmith",
-  "license": "MIT",
-  "scripts": {
-    "start": "parcel prototype/index.html --no-cache --hmr-port 49359",
-    "build": "parcel build prototype/index.html --out-dir public --public-url ./"
-  },
-  "dependencies": {},
-  "devDependencies": {
-    "parcel-bundler": "^1.11.0"
-  }
+    "name": "dockerised-prototype",
+    "version": "0.1.0",
+    "main": "prototype/index.html",
+    "author": "Becky Arrowsmith",
+    "license": "MIT",
+    "scripts": {
+        "start": "parcel prototype/index.html --no-cache --hmr-port 49359",
+        "build": "parcel build prototype/index.html --out-dir public --public-url ./"
+    },
+    "dependencies": {},
+    "devDependencies": {
+        "parcel-bundler": "^1.11.0"
+    }
 }

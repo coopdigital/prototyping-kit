@@ -1,10 +1,7 @@
-FROM node:11.10.0
+FROM nginx:1.15.8
 
-WORKDIR /code
-ADD . /code
+COPY default.conf.template /etc/nginx/conf.d/default.conf.template
+COPY nginx.conf /etc/nginx/nginx.conf
+COPY dist /usr/share/nginx/html
 
-RUN npm install parcel-bundler
-
-EXPOSE 1234
-
-CMD ["npm", "run-script", "build"]
+CMD /bin/bash -c "envsubst '\$PORT' < /etc/nginx/conf.d/default.conf.template > /etc/nginx/conf.d/default.conf" && nginx -g 'daemon off;'
