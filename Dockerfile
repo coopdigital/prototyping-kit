@@ -4,3 +4,5 @@ WORKDIR /code
 ADD . /code
 
 RUN npm install parcel-bundler
+
+CMD ["npm", "start"]
