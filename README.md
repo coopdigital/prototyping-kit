@@ -46,3 +46,5 @@ $ heroku open
 ```
 
 You can look at the Heroku logs with `$ heroku logs --tail` incase of an error.
+
+This rep will deploy to [https://obscure-plains-88998.herokuapp.com/](https://obscure-plains-88998.herokuapp.com/).
