@@ -6,7 +6,7 @@
   "license": "MIT",
   "scripts": {
     "start": "parcel prototype/index.html --no-cache --hmr-port 49359",
-    "build": "parcel prototype/build index.html --out-dir public --public-url ./"
+    "build": "parcel build prototype/index.html --out-dir public --public-url ./"
   },
   "dependencies": {},
   "devDependencies": {
