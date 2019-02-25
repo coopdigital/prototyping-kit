@@ -18,8 +18,6 @@ You can also use the option `--no-cache` flag to build a clean image
 #### Start Parcel service
 `$ npm start`
 
-This will bypass Docker completely and allow you to work locally. BUT, it defeats the purpose of using containers in the first place and you might not deploy what you expect.
-
 ## Deploying to Heroku
 
 Something something why containers are good
