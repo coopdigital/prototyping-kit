@@ -4,8 +4,6 @@ Words and stuff
 
 I don't know if we should serve the `dist` or `public` folder lol. Parcel generates both. At the moment, Heroku is serving `dist`.
 
-This repo will deploy to [https://obscure-plains-88998.herokuapp.com/](https://obscure-plains-88998.herokuapp.com/).
-
 ##  Local development
 
 ### Build the thing
