@@ -9,7 +9,7 @@ This repo will deploy to [https://obscure-plains-88998.herokuapp.com/](https://o
 ##  Local development
 
 ### Build the thing
-`$ docker build -t dockerised-prototype .`
+`$ docker build -t {$NAME} .` You can 'tag' (name) the image whatever you like. This is useful if you have multiple prototypes on the go.
 
 You can also use the option `--no-cache` flag to build a clean image
 
