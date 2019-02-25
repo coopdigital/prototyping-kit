@@ -14,9 +14,10 @@ This repo will deploy to [https://obscure-plains-88998.herokuapp.com/](https://o
 You can also use the option `--no-cache` flag to build a clean image
 
 ### Run the thing
-`$ docker-compose up`
+####
+`$ npm install` - Parcel and it's deps
 
-## This is an option but don't do it
+#### Start Parcel service
 `$ npm start`
 
 This will bypass Docker completely and allow you to work locally. BUT, it defeats the purpose of using containers in the first place and you might not deploy what you expect.
