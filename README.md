@@ -6,17 +6,20 @@ I don't know if we should serve the `dist` or `public` folder lol. Parcel genera
 
 ##  Local development
 
-### Build the thing
+<!-- ### Build the thing
 `$ docker build -t {$NAME} .` You can 'tag' (name) the image whatever you like. This is useful if you have multiple prototypes on the go.
 
-You can also use the option `--no-cache` flag to build a clean image
+You can also use the option `--no-cache` flag to build a clean image-->
 
 ### Run the thing
 ####
 `$ npm install` - Parcel and it's deps
 
 #### Start Parcel service
-`$ npm start`
+`$ npm run start`
+
+#### Building out dist folder (not really needed tbh)
+`$ npm run build`
 
 ## Deploying to Heroku
 

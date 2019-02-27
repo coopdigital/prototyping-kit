@@ -10,8 +10,7 @@
     },
     "dependencies": {
         "@coopdigital/css-foundations": "^1.7.6",
-        "@coopdigital/foundations-global": "^1.0.3",
-        "node-sass": "^4.11.0"
+        "@coopdigital/foundations-global": "^1.0.3"
     },
     "devDependencies": {
         "parcel-bundler": "^1.11.0"
