@@ -1,14 +1,18 @@
 {
     "name": "dockerised-prototype",
     "version": "0.1.0",
-    "main": "prototype/index.html",
+    "main": "src/index.html",
     "author": "Becky Arrowsmith",
     "license": "MIT",
     "scripts": {
-        "start": "parcel prototype/index.html --no-cache --hmr-port 49359",
-        "build": "parcel build prototype/index.html --out-dir public --public-url ./"
+        "start": "parcel src/index.html --no-cache --hmr-port 49359",
+        "build": "parcel build src/index.html --out-dir dist --public-url ./"
     },
-    "dependencies": {},
+    "dependencies": {
+        "@coopdigital/css-foundations": "^1.7.6",
+        "@coopdigital/foundations-global": "^1.0.3",
+        "node-sass": "^4.11.0"
+    },
     "devDependencies": {
         "parcel-bundler": "^1.11.0"
     }
