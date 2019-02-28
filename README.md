@@ -9,6 +9,8 @@ You must edit the `.htpasswd` file sitting in the root of the site. Sites must b
 
 You can find a [generator to create a file for you here](http://www.htaccesstools.com/htpasswd-generator/). Stick the line it generates into your `.htpasswd` file, replacing everything else in there.
 
+By default, the username and password are `testing`. You MUST change this.
+
 ##  Local development
 
 <!-- ### Build the thing

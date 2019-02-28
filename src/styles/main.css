@@ -1,12 +1,2 @@
-@import "../../node_modules/@coopdigital/foundations-vars/dist/vars.css";
-
 @import "../../node_modules/@coopdigital/css-foundations/dist/foundations.css";
-@import "../../node_modules/@coopdigital/foundations-global/dist/global.css";
 @import "../../node_modules/@coopdigital/foundations-layout/dist/layout.css";
-
-
-@import "../../node_modules/@coopdigital/foundations-buttons/dist/buttons.css";
-@import "../../node_modules/@coopdigital/foundations-colors/dist/colors.css";
-@import "../../node_modules/@coopdigital/foundations-forms/dist/forms.css";
-@import "../../node_modules/@coopdigital/foundations-tables/dist/tables.css";
-@import "../../node_modules/@coopdigital/foundations-typography/dist/typography.css";
