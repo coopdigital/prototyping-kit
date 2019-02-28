@@ -4,6 +4,11 @@ Words and stuff
 
 I don't know if we should serve the `dist` or `public` folder lol. Parcel generates both. At the moment, Heroku is serving `dist`.
 
+## Password protection
+You must edit the `.htpasswd` file sitting in the root of the site. Sites must be passworded to avoid them being crawled or stumbled upon.
+
+You can find a [generator to create a file for you here](http://www.htaccesstools.com/htpasswd-generator/). Stick the line it generates into your `.htpasswd` file, replacing everything else in there.
+
 ##  Local development
 
 <!-- ### Build the thing
