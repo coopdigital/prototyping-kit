@@ -55,8 +55,3 @@ $ heroku open
 ```
 
 You can look at the Heroku logs with `$ heroku logs --tail` incase of an error.
-
-### Password protection
-Navigate into the `dist` directory and run the following to create a new username/password.
-
-` $ htpasswd -c .htpasswd [username]`
