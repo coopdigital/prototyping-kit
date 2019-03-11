@@ -10,6 +10,8 @@ then
 
     cd installer_files
     cp parcel.package.json ../package.json
+    cp parcel.index.html ../src/index.html
+    cp parcel.index.js ../src/js/index.js
 
     printf "\n\n"
     printf "Added files for Parcel implementation!"
@@ -18,12 +20,16 @@ then
 else
     printf "\n\n"
     printf "You chose Webpack!"
-    printf "Copying files necessary for Webpack implementatoon..."
+    printf "\n\n"
+    printf "Copying files necessary for Webpack implementation..."
     printf "\n\n"
 
     cd installer_files
     cp webpack.config.js ../webpack.config.js
     cp webpack.package.json ../package.json
+    cp webpack.index.html ../src/index.html
+    cp webpack.index.js ../src/js/index.js
+    cp webpack.exampleModule.js ../src/js/exampleModule.js
 
     printf "\n\n"
     printf "Added files for Webpack implementation!"
