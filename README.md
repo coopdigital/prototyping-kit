@@ -29,14 +29,18 @@ By default, the username and password are `testing`. You MUST change this.
 You can also use the option `--no-cache` flag to build a clean image-->
 
 ### Run the thing
-####
-`$ npm install` - Parcel and it's deps
+#### Installing the things
+`$ npm install`
 
-#### Start Parcel service
-`$ npm run start`
+#### Start the thing
+Parcel implementation: `$ npm run parcel-start`
 
-#### Building out dist folder (not really needed tbh)
-`$ npm run build`
+Webpack implemention: `$ npm run webpack-watch`
+
+#### Build the thing (build out the `dist` folder if you want to deploy straight away)
+Parcel implementation: `$ npm run parcel-build`
+
+Webpack implementation: `$ npm run webpack-build`
 
 ## Deploying to Heroku
 

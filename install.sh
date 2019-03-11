@@ -5,7 +5,7 @@ if [ $answer = 1 ]
 then
     printf "\n\nYou chose Parcel!\n\n"
 
-    printf "Copying Dockerfile for Parcel..."
+    printf "Copying files necessary for Parcel implementatoon..."
     printf "\n\n"
 
     cd installer_files
@@ -18,6 +18,7 @@ then
 else
     printf "\n\n"
     printf "You chose Webpack!"
+    printf "Copying files necessary for Webpack implementatoon..."
     printf "\n\n"
 
     cd installer_files
