@@ -9,10 +9,10 @@ then
     printf "\n\n"
 
     cd installer_files
-    cp Dockerfile.parcel ../Dockerfile
+    cp parcel.package.json ../package.json
 
     printf "\n\n"
-    printf "Dockerfile for Parcel complete!"
+    printf "Added files for Parcel implementation!"
     printf "\n\n"
 
 else
@@ -20,6 +20,11 @@ else
     printf "You chose Webpack!"
     printf "\n\n"
 
-    printf "Unfortunately we don't have a working Webpack implemention yet. But we will do, soon!"
+    cd installer_files
+    cp webpack.config.js ../webpack.config.js
+    cp webpack.package.json ../package.json
+
+    printf "\n\n"
+    printf "Added files for Webpack implementation!"
     printf "\n\n"
 fi
