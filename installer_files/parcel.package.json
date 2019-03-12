@@ -5,8 +5,8 @@
     "author": "Becky Arrowsmith",
     "license": "MIT",
     "scripts": {
-        "parcel-start": "parcel src/index.html --no-cache --hmr-port 49359",
-        "parcel-build": "parcel build src/index.html --out-dir dist --public-url ./"
+        "parcel:start": "parcel src/index.html --no-cache --hmr-port 49359",
+        "parcel:build": "parcel build src/index.html --out-dir dist --public-url ./"
     },
     "dependencies": {
         "@coopdigital/css-foundations": "^1.7.6",

@@ -33,14 +33,14 @@ You can also use the option `--no-cache` flag to build a clean image-->
 `$ npm install`
 
 #### Start the thing
-Parcel implementation: `$ npm run parcel-start`
+Parcel implementation: `$ npm run parcel:start`
 
-Webpack implemention: `$ npm run webpack-watch`
+Webpack implemention: `$ npm run webpack:watch`
 
 #### Build the thing (build out the `dist` folder if you want to deploy straight away)
-Parcel implementation: `$ npm run parcel-build`
+Parcel implementation: `$ npm run parcel:build`
 
-Webpack implementation: `$ npm run webpack-build`
+Webpack implementation: `$ npm run webpack:build`
 
 ## Deploying to Heroku
 

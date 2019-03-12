@@ -1,13 +1,2 @@
-import exampleModule from './exampleModule.js'
-
-function entryPoint () {
-  const msg = "I'm the entry point!"
-  const element = document.getElementById('hello-world')
-  const text = document.createTextNode(`${msg}`)
-
-  element.appendChild(text)
-  console.log(`${msg}`)
-}
-
-entryPoint()
-exampleModule()
+console.log('Hello from Dockerised Prototype kit.js')
+console.log('Im inside the prototype folder')

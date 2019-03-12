@@ -5,8 +5,8 @@
     "author": "Becky Arrowsmith",
     "license": "MIT",
     "scripts": {
-        "webpack-build": "webpack -p",
-        "webpack-watch": "webpack --watch"
+        "webpack:build": "webpack -p",
+        "webpack:watch": "webpack --watch"
     },
     "dependencies": {
         "@coopdigital/css-foundations": "^1.7.6",
