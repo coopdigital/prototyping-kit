@@ -24,12 +24,19 @@ else
     printf "Copying files necessary for Webpack implementation..."
     printf "\n\n"
 
+    mkdir dist
+
     cd installer_files
     cp webpack.config.js ../webpack.config.js
     cp webpack.package.json ../package.json
     cp webpack.index.html ../src/index.html
     cp webpack.index.js ../src/js/index.js
     cp webpack.exampleModule.js ../src/js/exampleModule.js
+
+    cp webpack.dist.index.html ../dist/index.html
+
+
+    
 
     printf "\n\n"
     printf "Added files for Webpack implementation!"
