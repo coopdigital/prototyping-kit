@@ -1,4 +1,12 @@
 #!/bin/bash
+
+printf "\e[36m
+/-' _ __ _  _    _  _ _ _|_ _ _|_  _ . _  _   | ._|_
+\_,(_)  (_)|_)  |_)| (_) | (_) |\/|_)|| |(_|  |<| | 
+           |    |               / |       _|        "
+
+printf "\e[39m\n\n"
+
 read -n 1 -p "Welcome to the Prototyping kit! Which version would you like? 1. Parcel 2. Webpack (Type '1' or '2') " answer
 
 if [ $answer = 1 ] 
