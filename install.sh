@@ -39,13 +39,8 @@ else
     cp webpack.babelrc ../.babelrc
     cp webpack.package.json ../package.json
     cp webpack.index.html ../src/index.html
-    cp webpack.index.js ../src/js/index.js
-    cp webpack.exampleModule.js ../src/js/exampleModule.js
-
-    cp webpack.dist.index.html ../dist/index.html
-
-
-    
+    cp webpack.main.js ../src/main.js
+    cp webpack.main.scss ../src/scss/main.scss
 
     printf "\n\n"
     printf "Added files for Webpack implementation!"
