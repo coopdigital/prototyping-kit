@@ -1,14 +1,16 @@
 // webpack v4
 const path = require('path')
 const nodeExternals = require('webpack-node-externals')
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+
 module.exports = {
-  entry: { main: './src/js/index.js' },
+  entry: { main: './src/index.js' },
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'main.js'
   },
   target: 'node',
-  externals: [nodeExternals()], 
+  externals: [nodeExternals()],
   module: {
     rules: [
       {
@@ -19,6 +21,10 @@ module.exports = {
         }
       },
       {
+        test: /\.css$/,
+        use: ['style-loader', MiniCssExtractPlugin.loader, 'css-loader']
+      },
+      {
         test: /\.js$/,
         exclude: /node_modules/,
         loader: 'eslint-loader',
@@ -27,5 +33,10 @@ module.exports = {
         }
       }
     ]
-  }
+  },
+  plugins: [
+    new MiniCssExtractPlugin({
+      filename: 'style.css',
+    })
+  ]
 }
