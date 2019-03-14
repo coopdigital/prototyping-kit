@@ -36,6 +36,7 @@ else
 
     cd installer_files
     cp webpack.config.js ../webpack.config.js
+    cp webpack.babelrc ../.babelrc
     cp webpack.package.json ../package.json
     cp webpack.index.html ../src/index.html
     cp webpack.index.js ../src/js/index.js

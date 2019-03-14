@@ -1,13 +1,23 @@
-var path = require('path')
-
+// webpack v4
+const path = require('path')
+const nodeExternals = require('webpack-node-externals')
 module.exports = {
-  entry: './src/js/index.js',
+  entry: { main: './src/js/index.js' },
   output: {
-    filename: 'bundle.js',
-    path: path.resolve(__dirname, 'dist')
+    path: path.resolve(__dirname, 'dist'),
+    filename: 'main.js'
   },
+  target: 'node',
+  externals: [nodeExternals()], 
   module: {
     rules: [
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        use: {
+          loader: 'babel-loader'
+        }
+      },
       {
         test: /\.js$/,
         exclude: /node_modules/,
