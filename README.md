@@ -1,18 +1,18 @@
 # Dockerised Prototype
 
-Words and stuff
-
-I don't know if we should serve the `dist` or `public` folder lol. Parcel generates both. At the moment, Heroku is serving `dist`.
-
 ## Docker
-You will need the Docker Daemon running in order to build this out for Heroku. You simply need the Docker Client running to do this, [you can find it here](https://hub.docker.com/editions/community/docker-ce-desktop-mac).
+You will need the Docker Daemon running in order to build this out for Heroku. In other words, you need to download and install the Docker Client, [you can find it here](https://hub.docker.com/editions/community/docker-ce-desktop-mac).
 
 ## Installation
-In the future we will have two implementations of the Prototyping kit: one that utilises Parcel, and the other: Webpack.
+There are two implementations of the prototyping kit to choose from; they're based on **Parcel** and **Webpack**.
 
-This is because simple prototyping in code doesn't need something as meaty as Webpack so Parcel will do just fine and run straight out of the box. Other projects might want a Webpack implementation that they can customise.
+Parcel is ideal for when you want something lightweight, to get something up quickly with live reload and the basics.
 
-There is a `install.sh` shell script that will install the necessary files for you. Run `bash install.sh` in the project root and follow the on screen instructions. Under the hood, this will generate a slightly differently configured Dockerfile for you based on which implementation you pick.
+Webpack can handle ES6 to bundles and PostCSS and all that cool stuff. 
+
+The feature set for either isn't decided yet, please write issues and request stuff!
+
+There is a `install.sh` shell script that will install the necessary files for you. Run `bash install.sh` in the project root and follow the on screen instructions. Under the hood, this will generate a different codebase for you depending on which implementation you choose.
 
 ## Password protection
 You must edit the `.htpasswd` file sitting in the root of the site. Sites must be passworded to avoid them being crawled or stumbled upon.
@@ -22,11 +22,6 @@ You can find a [generator to create a file for you here](http://www.htaccesstool
 By default, the username and password are `testing`. You MUST change this.
 
 ##  Local development
-
-<!-- ### Build the thing
-`$ docker build -t {$NAME} .` You can 'tag' (name) the image whatever you like. This is useful if you have multiple prototypes on the go.
-
-You can also use the option `--no-cache` flag to build a clean image-->
 
 ### Run the thing
 #### Installing the things
@@ -70,16 +65,12 @@ $ heroku open
 
 You can look at the Heroku logs with `$ heroku logs --tail` incase of an error.
 
-### Changing the Heroku remote
-You must change your Heroku git remote to match the name of your generated app:
-
-`$ heroku git:remote -a <app-name>`
-
-You can check your current remotes with:
-
-`$ git remote -v`
-
 ## FAQ
 
-Q: I see a "Welcome to nginx!" page!
+Q: **I see a "Welcome to nginx!" page!**
+
 A: You will need to build your `dist` folder. You do this by running the `build` task. In the case of the Webpack implementation, this will be `$ npm run webpack:build`.
+
+Q:**Hmm, Parcel generates both a `dist` and a `public` folder. Which should I use?**
+
+A: Honestly, no idea atm! Heroku is serving `dist` at the moment. 
