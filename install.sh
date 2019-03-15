@@ -40,6 +40,7 @@ else
     cp webpack.postcss.config.js ../postcss.config.js
     cp webpack.package.json ../package.json
     cp webpack.index.html ../src/index.html
+    cp webpack.exampleModule.js ../src/js/exampleModule.js
     cp webpack.main.js ../src/main.js
     cp webpack.main.scss ../src/scss/main.scss
 
