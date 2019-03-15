@@ -1,11 +1,5 @@
-function exampleModule () {
-  const msg = 'I\'m an example module'
+const helloWorld = msg => {
+  return `${msg}`
+}
 
-  const element = document.getElementById('hello-world')
-  const text = document.createTextNode(`${msg}`)
-
-  element.appendChild(text)
-  console.log(`${msg}`)
-};
-
-export default exampleModule
+export default helloWorld
