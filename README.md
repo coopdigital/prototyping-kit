@@ -78,3 +78,8 @@ You must change your Heroku git remote to match the name of your generated app:
 You can check your current remotes with:
 
 `$ git remote -v`
+
+## FAQ
+
+Q: I see a "Welcome to nginx!" page!
+A: You will need to build your `dist` folder. You do this by running the `build` task. In the case of the Webpack implementation, this will be `$ npm run webpack:build`.
