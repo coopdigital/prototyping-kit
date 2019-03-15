@@ -1,25 +1,50 @@
 #!/bin/bash
+
+printf "\e[36m
+/-' _ __ _  _    _  _ _ _|_ _ _|_  _ . _  _   | ._|_
+\_,(_)  (_)|_)  |_)| (_) | (_) |\/|_)|| |(_|  |<| | 
+           |    |               / |       _|        "
+
+printf "\e[39m\n\n"
+
 read -n 1 -p "Welcome to the Prototyping kit! Which version would you like? 1. Parcel 2. Webpack (Type '1' or '2') " answer
 
 if [ $answer = 1 ] 
 then
     printf "\n\nYou chose Parcel!\n\n"
 
-    printf "Copying Dockerfile for Parcel..."
+    printf "Copying files necessary for Parcel implementatoon..."
     printf "\n\n"
 
     cd installer_files
-    cp Dockerfile.parcel ../Dockerfile
+    cp parcel.package.json ../package.json
+    cp parcel.index.html ../src/index.html
+    cp parcel.index.js ../src/js/index.js
 
     printf "\n\n"
-    printf "Dockerfile for Parcel complete!"
+    printf "Added files for Parcel implementation!"
     printf "\n\n"
 
 else
     printf "\n\n"
     printf "You chose Webpack!"
     printf "\n\n"
+    printf "Copying files necessary for Webpack implementation..."
+    printf "\n\n"
 
-    printf "Unfortunately we don't have a working Webpack implemention yet. But we will do, soon!"
+    mkdir dist
+
+    cd installer_files
+    cp webpack.config.js ../webpack.config.js
+    cp webpack.babelrc ../.babelrc
+    cp webpack.postcss.config.js ../postcss.config.js
+    cp webpack.package.json ../package.json
+    cp webpack.index.html ../src/index.html
+    cp webpack.exampleModule.js ../src/js/exampleModule.js
+    cp webpack.main.js ../src/main.js
+    cp webpack.main.scss ../src/scss/main.scss
+
+    printf "\n\n"
+    printf "Added files for Webpack implementation!"
     printf "\n\n"
 fi

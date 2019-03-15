@@ -29,14 +29,18 @@ By default, the username and password are `testing`. You MUST change this.
 You can also use the option `--no-cache` flag to build a clean image-->
 
 ### Run the thing
-####
-`$ npm install` - Parcel and it's deps
+#### Installing the things
+`$ npm install`
 
-#### Start Parcel service
-`$ npm run start`
+#### Start the thing
+Parcel implementation: `$ npm run parcel:start`
 
-#### Building out dist folder (not really needed tbh)
-`$ npm run build`
+Webpack implemention: `$ npm run webpack:watch`
+
+#### Build the thing (build out the `dist` folder if you want to deploy straight away)
+Parcel implementation: `$ npm run parcel:build`
+
+Webpack implementation: `$ npm run webpack:build`
 
 ## Deploying to Heroku
 
@@ -74,3 +78,8 @@ You must change your Heroku git remote to match the name of your generated app:
 You can check your current remotes with:
 
 `$ git remote -v`
+
+## FAQ
+
+Q: I see a "Welcome to nginx!" page!
+A: You will need to build your `dist` folder. You do this by running the `build` task. In the case of the Webpack implementation, this will be `$ npm run webpack:build`.

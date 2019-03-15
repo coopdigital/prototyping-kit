@@ -1,0 +1,25 @@
+{
+    "name": "dockerised-prototype",
+    "version": "0.1.0",
+    "main": "src/index.html",
+    "author": "Becky Arrowsmith",
+    "license": "MIT",
+    "scripts": {
+        "parcel:start": "parcel src/index.html --no-cache --hmr-port 49359",
+        "parcel:build": "parcel build src/index.html --out-dir dist --public-url ./"
+    },
+    "dependencies": {
+        "@coopdigital/css-foundations": "^1.7.6",
+        "@coopdigital/foundations-global": "^1.0.3"
+    },
+    "devDependencies": {
+        "eslint": "^5.15.1",
+        "eslint-config-standard": "^12.0.0",
+        "eslint-loader": "^2.1.2",
+        "eslint-plugin-import": "^2.16.0",
+        "eslint-plugin-node": "^8.0.1",
+        "eslint-plugin-promise": "^4.0.1",
+        "eslint-plugin-standard": "^4.0.0",
+        "parcel-bundler": "^1.11.0"
+    }
+}
