@@ -21,6 +21,8 @@ then
     cp parcel.index.html ../src/index.html
     cp parcel.index.js ../src/js/index.js
 
+    rm -rf installer_files
+
     printf "\n\n"
     printf "Added files for Parcel implementation!"
     printf "\n\n"
@@ -43,6 +45,8 @@ else
     cp webpack.exampleModule.js ../src/js/exampleModule.js
     cp webpack.main.js ../src/main.js
     cp webpack.main.scss ../src/scss/main.scss
+
+    rm -rf installer_files
 
     printf "\n\n"
     printf "Added files for Webpack implementation!"
