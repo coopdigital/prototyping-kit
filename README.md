@@ -1,5 +1,7 @@
 # Dockerised Prototype
 
+You can visit #prototyping-kit on Slack for questions, support and requests.
+
 ## Docker
 You will need the Docker Daemon running in order to build this out for Heroku. In other words, you need to download and install the Docker Client, [you can find it here](https://hub.docker.com/editions/community/docker-ce-desktop-mac).
 
