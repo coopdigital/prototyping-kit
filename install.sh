@@ -16,10 +16,15 @@ then
     printf "Copying files necessary for Parcel implementatoon..."
     printf "\n\n"
 
+    mkdir src
+    mkdir src/js
+    mkdir src/scss
+
     cd installer_files
     cp parcel.package.json ../package.json
     cp parcel.index.html ../src/index.html
-    cp parcel.index.js ../src/js/index.js
+    cp parcel.main.js ../src/js/main.js
+    cp parcel.main.scss ../src/scss/main.scss
 
     rm -rf installer_files
 
@@ -35,7 +40,10 @@ else
     printf "\n\n"
 
     mkdir dist
-
+    mkdir src
+    mkdir src/js
+    mkdir src/scss
+    
     cd installer_files
     cp webpack.config.js ../webpack.config.js
     cp webpack.babelrc ../.babelrc
