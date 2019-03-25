@@ -46,6 +46,12 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: 'style.css'
     }),
+    // new HtmlWebpackPlugin({
+    //   inject: false,
+    //   hash: true,
+    //   template: './src/index.html',
+    //   filename: 'index.html'
+    // }),
     new NunjucksWebpackPlugin({
       templates: [
         {

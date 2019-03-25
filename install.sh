@@ -43,16 +43,23 @@ else
     mkdir src
     mkdir src/js
     mkdir src/scss
+    mkdir src/templates
+    mkdir src/templates/partials
     
     cd installer_files
     cp webpack.config.js ../webpack.config.js
     cp webpack.babelrc ../.babelrc
     cp webpack.postcss.config.js ../postcss.config.js
     cp webpack.package.json ../package.json
-    cp webpack.index.html ../src/index.html
     cp webpack.exampleModule.js ../src/js/exampleModule.js
     cp webpack.main.js ../src/main.js
     cp webpack.main.scss ../src/scss/main.scss
+
+    # Nunjucks partials
+    cp webpack.index.njk ../src/templates/index.njk
+    cp webpack._header.njk ../src/templates/partials/_header.njk
+    cp webpack._nav.njk ../src/templates/partials/_nav.njk
+    cp webpack._footer.njk ../src/templates/partials/_footer.njk
 
     rm -rf installer_files
 
