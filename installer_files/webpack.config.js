@@ -3,6 +3,7 @@ const path = require('path')
 const nodeExternals = require('webpack-node-externals')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const NunjucksWebpackPlugin = require('nunjucks-webpack-plugin')
 
 module.exports = {
   entry: { main: './src/main.js' },
@@ -45,11 +46,13 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: 'style.css'
     }),
-    new HtmlWebpackPlugin({
-      inject: false,
-      hash: true,
-      template: './src/index.html',
-      filename: 'index.html'
+    new NunjucksWebpackPlugin({
+      templates: [
+        {
+          from: './src/templates/index.njk',
+          to: 'index.html'
+        }
+      ]
     })
   ]
 }
