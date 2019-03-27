@@ -9,8 +9,7 @@
         "parcel:build": "parcel build src/index.html --out-dir dist --public-url ./"
     },
     "dependencies": {
-        "@coopdigital/css-foundations": "^1.7.6",
-        "@coopdigital/foundations-global": "^1.0.3"
+        "@coopdigital/css-foundations": "^1.7.6"
     },
     "devDependencies": {
         "eslint": "^5.15.1",

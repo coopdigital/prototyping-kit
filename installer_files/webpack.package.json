@@ -9,8 +9,7 @@
         "webpack:build": "webpack --mode production"
     },
     "dependencies": {
-        "@coopdigital/css-foundations": "^1.7.6",
-        "@coopdigital/foundations-global": "^1.0.3"
+        "@coopdigital/css-foundations": "^1.7.6"
     },
     "devDependencies": {
         "@babel/core": "^7.3.4",
