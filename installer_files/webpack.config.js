@@ -2,7 +2,6 @@
 const path = require('path')
 const nodeExternals = require('webpack-node-externals')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
 const NunjucksWebpackPlugin = require('nunjucks-webpack-plugin')
 
 module.exports = {
