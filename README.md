@@ -64,6 +64,11 @@ $ heroku container:push web
 $ heroku container:release web
 $ heroku open
 ```
+or
+```
+npm run deploy
+```
+This will run the Webpack or Parcel build and then the three Heroku commands to release and deploy you prototype.
 
 You can look at the Heroku logs with `$ heroku logs --tail` incase of an error.
 
