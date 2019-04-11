@@ -1,1 +1,12 @@
 @import "../../node_modules/@coopdigital/css-foundations/dist/foundations.css";
+
+@import "../../node_modules/@coopdigital/component-card/dist/card.css";
+
+
+.demo-column-block {
+    display: block;
+    width: 100%;
+    height: 100px;
+    background-color: var(--color-turquoise-light);
+}  
+
