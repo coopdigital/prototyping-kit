@@ -1,7 +1,10 @@
 @import "../../node_modules/@coopdigital/css-foundations/dist/foundations.css";
 
 @import "../../node_modules/@coopdigital/component-card/dist/card.css";
-
+@import "../../node_modules/@coopdigital/component-card--product/dist/card--product.css";
+@import "../../node_modules/@coopdigital/component-search/dist/component.css";
+@import "../../node_modules/@coopdigital/component-signpost/dist/signpost.css";
+@import "../../node_modules/@coopdigital/component-tags/dist/tags.css";
 
 .demo-column-block {
     display: block;
@@ -10,3 +13,9 @@
     background-color: var(--color-turquoise-light);
 }  
 
+/* 
+
+Add you styles below this block
+You can write SCSS or CSS
+
+*/
