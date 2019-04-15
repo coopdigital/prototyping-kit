@@ -64,9 +64,10 @@ $ heroku container:push web
 $ heroku container:release web
 $ heroku open
 ```
-or
+or (depending on which implementation you're using)
 ```
-npm run deploy
+npm run parcel:deploy
+npm run wepack:deploy
 ```
 This will run the Webpack or Parcel build and then the three Heroku commands to release and deploy you prototype.
 
