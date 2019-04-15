@@ -9,9 +9,16 @@
         "parcel:build": "parcel build src/index.html --out-dir dist --public-url ./"
     },
     "dependencies": {
+        "@coopdigital/component-card": "^1.0.2",
+        "@coopdigital/component-card--product": "^1.0.8",
+        "@coopdigital/component-search": "^1.0.2",
+        "@coopdigital/component-signpost": "^1.0.1",
+        "@coopdigital/component-skipnav": "^1.0.0",
+        "@coopdigital/component-tags": "^1.0.2",
         "@coopdigital/css-foundations": "^1.7.6"
     },
     "devDependencies": {
+        "@babel/core": "^7.4.3",
         "eslint": "^5.15.1",
         "eslint-config-standard": "^12.0.0",
         "eslint-loader": "^2.1.2",
@@ -19,6 +26,7 @@
         "eslint-plugin-node": "^8.0.1",
         "eslint-plugin-promise": "^4.0.1",
         "eslint-plugin-standard": "^4.0.0",
-        "parcel-bundler": "^1.11.0"
+        "parcel-bundler": "^1.11.0",
+        "sass": "^1.18.0"
     }
 }
