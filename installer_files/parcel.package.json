@@ -7,7 +7,7 @@
     "scripts": {
         "parcel:start": "parcel src/index.html --no-cache --hmr-port 49359",
         "parcel:build": "parcel build src/index.html --out-dir dist --public-url ./",
-        "deploy": "npm run parcel:build && heroku container:push web && heroku container:release web && heroku open"
+        "parcel:deploy": "npm run parcel:build && heroku container:push web && heroku container:release web && heroku open"
     },
     "dependencies": {
         "@coopdigital/css-foundations": "^1.7.6"
