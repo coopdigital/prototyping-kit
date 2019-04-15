@@ -6,7 +6,8 @@
     "license": "MIT",
     "scripts": {
         "webpack:dev": "webpack-dev-server",
-        "webpack:build": "webpack --mode production"
+        "webpack:build": "webpack --mode production",
+        "wepack:deploy": "npm run webpack:build && heroku container:push web && heroku container:release web && heroku open"
     },
     "dependencies": {
         "@coopdigital/css-foundations": "^1.7.6"

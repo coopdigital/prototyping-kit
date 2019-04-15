@@ -6,7 +6,8 @@
     "license": "MIT",
     "scripts": {
         "parcel:start": "parcel src/index.html --no-cache --hmr-port 49359",
-        "parcel:build": "parcel build src/index.html --out-dir dist --public-url ./"
+        "parcel:build": "parcel build src/index.html --out-dir dist --public-url ./",
+        "parcel:deploy": "npm run parcel:build && heroku container:push web && heroku container:release web && heroku open"
     },
     "dependencies": {
         "@coopdigital/component-card": "^1.0.2",
