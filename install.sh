@@ -32,6 +32,10 @@ then
     printf "Added files for Parcel implementation!"
     printf "\n\n"
 
+    git remote rm origin
+
+    printf "Removed Git remote"
+
 else
     printf "\n\n"
     printf "You chose Webpack!"
@@ -66,4 +70,8 @@ else
     printf "\n\n"
     printf "Added files for Webpack implementation!"
     printf "\n\n"
+
+    git remote rm origin
+
+    printf "Removed Git remote"
 fi

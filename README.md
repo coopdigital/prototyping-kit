@@ -29,15 +29,15 @@ By default, the username and password are `testing`. You MUST change this.
 #### Installing the things
 `$ npm install`
 
-#### Start the thing
-Parcel implementation: `$ npm run parcel:start`
-
-Webpack implemention: `$ npm run webpack:watch`
-
 #### Build the thing (build out the `dist` folder if you want to deploy straight away)
 Parcel implementation: `$ npm run parcel:build`
 
 Webpack implementation: `$ npm run webpack:build`
+
+#### Start the thing
+Parcel implementation: `$ npm run parcel:start`
+
+Webpack implemention: `$ npm run webpack:watch`
 
 ## Deploying to Heroku
 
@@ -64,7 +64,7 @@ $ heroku container:push web
 $ heroku container:release web
 $ heroku open
 ```
-or (depending on which implementation you're using)
+or a simplfied command (this chains the above commands together for you):
 ```
 npm run parcel:deploy
 npm run wepack:deploy
