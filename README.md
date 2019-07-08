@@ -39,10 +39,6 @@ Parcel implementation: `$ npm run parcel:start`
 
 Webpack implemention: `$ npm run webpack:watch`
 
-## Deploying to Heroku
-
-Something something why containers are good
-
 ### Deploying for the first time
 
 You may find this takes ~10 seconds to build (for a vanilla clone of the repo). Don't worry about it, Docker is smart enough to reuse stuff where it can so future deployments will take less time.
