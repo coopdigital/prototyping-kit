@@ -1,6 +1,5 @@
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const webpack = require("webpack");
-const options = require("./options");
+const CleanWebpackPlugin = require("clean-webpack-plugin");
 
 /**
  * Plugins
@@ -10,30 +9,15 @@ const options = require("./options");
  *
  * See documentation for more details. https://webpack.js.org/concepts/plugins
  */
-module.exports = (environment) => {
+module.exports = () => {
   /**
-   * Store environment variables
-   */
-  const envOptions = options[environment];
-
-  /**
-   * Webpack EnvironmentPlugin
+   * Clean Webpack Plugin
    *
-   * Allows easy use of enviroment variables within Webpack.
+   * Cleans up the build folder.
    */
-  const EnvironmentOptions = () => {
-    return new webpack.EnvironmentPlugin(envOptions.settings);
-  }
-
-  /**
-   * Webpack ProvidePlugin
-   *
-   * Allows us the automatically load modules in Webpack without having to
-   * import them everywhere.
-   */
-  const EnvironmentPlugin = () => {
-    return new webpack.ProvidePlugin(envOptions.plugins);
-  }
+  const CleanPlugin = () => {
+    return new CleanWebpackPlugin("../dist", { allowExternal: true });
+  };
 
   /**
    * MiniCssExtractPlugin
@@ -42,13 +26,9 @@ module.exports = (environment) => {
    */
   const CssExtractPlugin = () => {
     return new MiniCssExtractPlugin({
-      filename: "assets/css/[name].[hash].css"
+      filename: "src/css/[name].[hash].css"
     });
-  }
-
-  return {
-    EnvironmentOptions,
-    EnvironmentPlugin,
-    CssExtractPlugin
   };
+
+  return { CleanPlugin, CssExtractPlugin };
 };

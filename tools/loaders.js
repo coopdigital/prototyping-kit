@@ -16,7 +16,7 @@ const postcssPresetEnv = require("postcss-preset-env");
  * See documentation for further details
  * https://webpack.js.org/concepts/#loaders
  */
-module.exports = (environment) => {
+module.exports = environment => {
   /**
    * Babel
    *
@@ -28,14 +28,12 @@ module.exports = (environment) => {
   const JSLoader = () => {
     return {
       test: /\.js$/,
-      include: [
-        path.resolve(__dirname, '../src/javascript')
-      ],
+      include: [path.resolve(__dirname, "../src/javascript")],
       use: {
         loader: "babel-loader"
       }
     };
-  }
+  };
 
   /**
    * CSS loader
@@ -109,8 +107,7 @@ module.exports = (environment) => {
                 preset: [
                   "default",
                   {
-                    normalizeWhitespace:
-                      environment === ("prod" || "preprod")
+                    normalizeWhitespace: environment === "prod"
                   }
                 ]
               })
@@ -119,7 +116,7 @@ module.exports = (environment) => {
         }
       ]
     };
-  }
+  };
 
   return { JSLoader, CSSLoader };
 };

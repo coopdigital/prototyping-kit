@@ -1,15 +1,12 @@
 const path = require("path");
-//const options = require("./options");
 const loadersModule = require("./loaders");
 const pluginsModule = require("./plugins");
 const pagesModule = require("./pages");
-const ssnPartials = require("./partials");
+const getHeaderFooter = require("./getHeaderFooter");
 
 module.exports = async env => {
   /**
-   * Environment Settings
-   *
-   * Define environment variable.
+   * Set environment variable.
    */
   const environment = env.NODE_ENV;
 
@@ -20,14 +17,14 @@ module.exports = async env => {
    * config will await this to complete so we can ensure we have the HTML from
    * the external endpoint.
    */
-  await ssnPartials(environment);
+  await getHeaderFooter();
 
   /**
    * Plugins
    *
    * Webpack Plugins. See plugins.js for full list.
    */
-  const plugins = pluginsModule(environment);
+  const plugins = pluginsModule();
 
   /**
    * Loaders
@@ -42,7 +39,7 @@ module.exports = async env => {
    * Using HtmlWebpackPlugin we define an array of page objects that we then
    * create templates from.
    */
-  const pages = pagesModule(environment);
+  const pages = pagesModule();
   const generatedPages = pages.generatePages();
 
   const config = {
@@ -94,11 +91,9 @@ module.exports = async env => {
      * the pages.js script we have to concat that output here so they are also
      * built.
      */
-    plugins: [
-      plugins.EnvironmentOptions(),
-      plugins.EnvironmentPlugin(),
-      plugins.CssExtractPlugin()
-    ].concat(generatedPages)
+    plugins: [plugins.CleanPlugin(), plugins.CssExtractPlugin()].concat(
+      generatedPages
+    )
   };
 
   /**
@@ -106,7 +101,7 @@ module.exports = async env => {
    *
    * For local development we use webpack-dev-server to create a localhost.
    */
-  if (environment === "development") {
+  if (environment === "local") {
     config.devServer = {
       contentBase: "dist",
       compress: true,

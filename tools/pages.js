@@ -17,23 +17,21 @@ const getHtmlPartial = filename => {
   throw new Error(`Argument ${filename} is an invalid filename.`);
 };
 
-module.exports = environment => {
-  const envOptions = options[environment];
-
+module.exports = () => {
   const generatePages = () => {
     const pages = [
       {
         name: "index",
-        filename: envOptions.filename,
-        title: "Your Offers",
-        baseUrl: `${envOptions.settings.OFFERS_WEBSITE_BASE_URL}/`,
+        filename: "index.html",
+        title: "Your prototype page",
+        baseUrl: "/",
         inject: true
       },
       {
         name: "error",
         filename: "error.html",
         title: "Page no found",
-        baseUrl: `${envOptions.settings.OFFERS_WEBSITE_BASE_URL}/`,
+        baseUrl: "/",
         // Prevent the JS loading. We manually include the CSS in template.
         inject: false
       }
